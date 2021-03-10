@@ -22,6 +22,10 @@ default port is ```8081```, you can change it in ```package.json``` >> scripts. 
 ```
 simply change port.
 
+TypesScript Types: - https://www.typescriptlang.org/docs/handbook/2/everyday-types.html
+`?` - Optional Properties
+`!` - Non-null assertion operator - https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-0.html#non-null-assertion-operator
+
 ---
 
 # AngularCLI
@@ -55,6 +59,7 @@ Run `ng generate component component-name` to generate a new component. You can 
 ```
 ng g m moduleName
 ng g c componentName --skipTests -is
+ng g s app/services/app --skipTests
 ```
 `--skipTests` skip test generation -  `-is` skip styles (css) generation
 
@@ -114,10 +119,27 @@ aboid send by reference, example:
 `...` operator *spread*. -> Separates each element of the array and create a new one.
 See more: https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Operators/Spread_syntax
 
-## netlify server
+LocalStorage and SessionStorage lets you save information in navegator
+```
+localStorage.setItem("historial",JSON.stringify(this._historial))
+this._historial = JSON.parse( localStorage.getItem("historial")! ) || []
+```
+
+
+## netlify server - servidor web
 https://www.netlify.com/
 
-## bootstrap
+## bootstrap - estilos
 https://getbootstrap.com/
 shortcut: write `.row` + TAB -> writes: `<div class="row"></div>`
 same with `.col` ...
+
+## developers.giphy.com - buscador de gifs con API que vamos a usar
+https://developers.giphy.com/
+https://developers.giphy.com/docs/api/endpoint#search
+
+## quicktype.io - convierte de jSON a lo que quieras
+https://quicktype.io/
+
+## animate.style - estilos animados para hacer más agradable la vista de la web
+https://animate.style/
